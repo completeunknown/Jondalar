@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+  <body>
+    <h2>tree</h2>
+    <table border="1">
+      <tr bgcolor="#9acd32">
+        <th>branch1</th>
+        <th>branch2</th>
+		<th>branch3</th>
+      </tr>
+      <xsl:for-each select="tree">
+	  <tr>
+        <td><xsl:value-of select="branch1"/></td>
+        <td><xsl:value-of select="branch2"/></td>
+		<td><xsl:value-of select="branch3"/></td>
+	  </tr>
+      </xsl:for-each>
+    </table>
+  </body>
+  </html>
+</xsl:template>
+
+</xsl:stylesheet>
+
+<tree>
+  <branch1>Branch1</branch1> 
+  <branch2>Branch2</branch2> 
+  <branch3>Branch3</branch3> 
+  <branch4>Branch4</branch4> 
+  <branch5>Branch5</branch5> 
+  <branch6>Branch6</branch6> 
+</tree>
+<tree>
+  <branch1>Brancha</branch1> 
+  <branch2>Branchb</branch2> 
+  <branch3>Branchc</branch3> 
+  <branch4>Branchd</branch4> 
+  <branch5>Branche</branch5> 
+  <branch6>Branchf</branch6> 
+</tree>
+	

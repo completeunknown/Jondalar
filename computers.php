@@ -1,0 +1,30 @@
+<?php
+    header('content-type: text/xml');
+    $output = "<computers>";
+    $output .= "<computer>";
+    $output .= "<name>Commodore 64</name>";
+    $output .= "<year>1982</year>";
+    $output .= "</computer>";
+    $output .= "<computer>";
+    $output .= "<name>Mac+</name>";
+    $output .= "<year>1986</year>";
+    $output .= "</computer>";
+    $output .= "<computer>";
+    $output .= "<name>Atari 800</name>";
+    $output .= "<year>1979</year>";
+    $output .= "</computer>"; 
+    $output .= "<computer>";
+    $output .= "<name>Apple IIe</name>";
+    $output .= "<year>1983</year>";
+    $output .= "</computer>"; 
+    $output .= "<computer>";
+    $output .= "<name>DELL Latitude 630</name>";
+    $output .= "<year>2003</year>";
+    $output .= "</computer>";
+	$output .= "<computer>";
+    $output .= "<name>DELL Optiplex 270</name>";
+    $output .= "<year>2001</year>";
+    $output .= "</computer>";
+    $output .= "</computers>";
+    print ($output);
+?>

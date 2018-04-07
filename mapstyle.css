@@ -1,0 +1,640 @@
+/* Global Defaults
+=====================================================================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,table,tr,th,td,embed,object {
+	margin:0;
+	padding:0;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img,abbr{
+	border:0;
+}
+ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+a,a:link,a:visited,a:hover { 
+	color:#000;
+	text-decoration:none; 
+}
+a:focus,a:hover { 
+	text-decoration:underline;
+}
+a img { 
+	border:0; 
+}
+.clear { 
+	clear:both; 
+}
+
+/* Global Elements
+=====================================================================*/
+body{
+	line-height: 1.6em;
+	font:62.5% Georgia, Garamond, serif;
+}
+body.blue { background:#fff url(../images/background1.png) repeat-x; }
+body.university-resources { background:#fff url(../images/background-ur.png) repeat-x; }
+body.duke-university { background:#fff url(../images/background-duke.png) repeat-x; }
+body.east-carolina-university{ background:#fff url(../images/background-ecu.png) repeat-x; }
+body.elizabeth-city-state-university { background:#fff url(../images/background-ecsu.png) repeat-x; }
+body.north-carolina-state-university { background:#fff url(../images/background-ncsu.png) repeat-x; }
+body.university-of-north-carolina { background:#fff url(../images/background-unc.png) repeat-x; }
+body.unc-wilmington { background:#fff url(../images/background-uncw.png) repeat-x; }
+.replace{
+	position:relative;
+	margin:0;
+	padding:0;
+	/* \*/
+	overflow:hidden;
+	/* */
+}
+.replace span{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.skiplink{
+	display:none;
+}
+/* Start CSS Coding
+=====================================================================*/
+#wrapper {
+	width:830px;
+	margin:0 auto;
+}
+#header {
+	width:810px;
+	height:92px;
+	margin:0 auto;
+}
+#logo{
+	width:324px;
+	height:20px;
+	font-size:1.2em;
+	position:relative;
+	overflow:hidden;
+	display:inline;
+	float:left;
+	margin:45px 0 0 14px;
+	text-indent:-5000px;
+}
+#logo span{
+	background:url(../images/logo.png) no-repeat;
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+#info{
+	width:357px;
+	height:26px;
+	font-size:1.2em;
+	position:relative;
+	overflow:hidden;
+	display:inline;
+	float:left;
+	margin:54px 0 0 53px;
+}
+#info a{
+	background:url(../images/info.png) no-repeat;
+	position:absolute;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+#info.duke-university a { background: url(../images/info-duke.png) no-repeat; }
+#info.east-carolina-university a { background: url(../images/info-ecu.png) no-repeat; }
+#info.elizabeth-city-state-university a { background: url(../images/info-ecsu.png) no-repeat; }
+#info.north-carolina-state-university a { background: url(../images/info-ncsu.png) no-repeat; }
+#info.university-of-north-carolina a { background: url(../images/info-unc.png) no-repeat; }
+#info.unc-wilmington a { background: url(../images/info-uncw.png) no-repeat; }
+#info a span {
+	visibility: hidden;
+}
+
+
+#topshadow {
+	width:830px;
+	height:7px;
+	background: url(../images/topshadow.png) no-repeat;
+	font-size:0;
+}
+#containertop {
+	width:810px;
+	background: url(../images/back_shadow.png) repeat-y;
+	padding:0 10px;
+}
+#intro {
+	width:810px;
+	height:199px;
+	position:relative;
+}
+#placephoto {
+	width:406px;
+	height:239px;
+	position:absolute;
+	top:-40px;
+	left:1px;
+}
+#photo1 {
+	width:406px;
+	height:239px;
+	background:url(../images/photo_1.png) no-repeat;
+}
+#photo2 {
+	width:406px;
+	height:239px;
+}
+#photo2.about-marine-sciences, #photo2 { background:url(../images/photo-about.png) no-repeat; }
+#photo2.research-report { background:url(../images/photo-research-report.png) no-repeat; }
+#photo2.news { 	background:url(../images/photo-news.png) no-repeat; }
+#photo2.contact { 	background:url(../images/photo-contact.png) no-repeat; }
+
+#ur_photo {
+	width:406px;
+	height:239px;
+}
+#ur_photo.university-resources { background:url(../images/photo-ur.png) no-repeat; }
+#ur_photo.duke-university { background:url(../images/photo-duke.png) no-repeat; }
+#ur_photo.east-carolina-university { background:url(../images/photo-ecu.png) no-repeat; }
+#ur_photo.elizabeth-city-state-university { background:url(../images/photo-ecsu.png) no-repeat; }
+#ur_photo.north-carolina-state-university { background:url(../images/photo-ncsu.png) no-repeat; }
+#ur_photo.university-of-north-carolina { background:url(../images/photo-unc.png) no-repeat; }
+#ur_photo.unc-wilmington { background:url(../images/photo-uncw.png) no-repeat; }
+
+
+#textintro {
+	width:360px;
+	float:right;
+	padding:20px 40px 0 0;
+}
+#textintro p {
+	padding:10px 0;
+	color:#42494b;
+	font-size:1.3em;
+	line-height:1.4em;
+}
+#textintro a {
+	color: blue;
+	text-decoration: underline;
+	}
+#mainmenu1, #mainmenu2 {
+	width:765px;
+	height:36px;
+	background:url(../images/back_menu1.png) repeat-x;
+	margin:0 auto;
+	padding:0 0 0 10px;
+	z-index: 20;
+}
+#mainmenu2 { background:url(../images/back_menu2.png) repeat-x; }
+#mainmenu1 li, #mainmenu2 li {
+	float:left;
+	font-size:15px;
+	height:36px;
+}
+#mainmenu1 li a, #mainmenu2 li a{
+	color:#fff;
+	height:26px;
+	display:block;
+	padding: 10px 20px 0 20px;
+	float:left;
+}
+#mainmenu1 li a:hover, #mainmenu1 li a.active,
+#mainmenu2 li a:hover, #mainmenu2 li a.active{
+	background:url(../images/back_menu1h.png) repeat-x;	
+	text-decoration:none;
+	color:#000;
+}
+#mainmenu2 li a:hover, #mainmenu2 li a.active{
+	background:url(../images/back_menu2h.png) repeat-x;
+}
+#containershadow {
+	width:810px;
+	padding:0;
+	float:left;
+	background:#fff url(../images/shadowmenu.png) repeat-x top;
+	position: relative;
+	z-index: 1;
+}
+#containercontent {
+	width:790px;
+	padding:10px 10px;
+}
+#container_left{
+	width:10px;
+	height:418px;
+	float:left;
+	background: url(../images/back_conleft.png) no-repeat;
+}
+#container_right{
+	width:10px;
+	height:418px;
+	float:right;
+	background: url(../images/back_conright.png) no-repeat;
+}
+#shadowmenu {
+	width:810px;
+	//background: url(../images/shadowmenu.png) repeat-x;
+	height:9px;
+	font-size:0;
+}
+
+#placeframe{
+	width:605px;
+	height:446px;
+	background: url(../images/back_map.png) repeat-y;
+	float:left;
+}
+.topframe{
+	width:605px;
+	height:446px;
+	background: url(../images/back_maptop.png) no-repeat;
+}
+.bottomframe{
+	width:577px;
+	height:418px;
+	padding:14px;
+	background: url(../images/back_mapbottom.png) no-repeat 0 100%;
+}
+#ullegend{
+	float:right;
+	width:165px;
+	margin:100px 0 0 0;
+	font-family:arial, verdana;
+}
+#ullegend li{
+	margin:8px 0;
+	padding:2px 0 2px 23px;
+}
+#ullegend li label{
+	font-size:1.6em;
+	font-family: Georgia, Garamond;
+}
+#ullegend .legend_1{
+	background: url(images/bullet.jpg) no-repeat 0 0;
+	font-size:1.2em;
+}
+#ullegend .legend_2{
+	background: url(images/bullet.jpg) no-repeat 0 -19px;
+	font-size:1.2em;
+}
+#ullegend .legend_3{
+	background: url(images/bullet.jpg) no-repeat 0 -38px;
+	font-size:1.2em;
+}
+#ullegend .legend_4{
+	background: url(images/bullet.jpg) no-repeat 0 -57px;
+	font-size:1.2em;
+}
+#ullegend .legend_5{
+	background: url(images/bullet.jpg) no-repeat 0 -76px;
+	font-size:1.2em;
+}
+.footer{
+	color:#717272;
+	font-family:arial, verdana;
+	width:770px;
+	margin:20px auto 0 auto;
+}
+
+/*ABOUT*/
+
+#place_about{
+	width:490px;
+	font-family:Georgia, Garamond;
+	font-size:13px;
+	line-height: 21px;
+	float:right;
+	margin:0 50px 0 0;
+	display:inline;
+	padding: 30px 0 0 30px;
+}
+#place_about.univ { width: 500px; padding: 50px 0 0 0px; }
+h2{
+	font-size:1.8em;
+	color:#086176;
+	font-weight:lighter;
+}
+
+#place_about p{
+	margin: 18px 0;
+	line-height:22px;
+}
+
+/*UNIVERSITY*/
+
+#containeruniv {
+	width:810px;
+}
+#leftnav {
+	width:233px;
+	background:#e9ebec url(../images/back_leftnav.png) repeat-x;
+	float:left;
+	padding:20px 0 0 0;
+}
+#leftnav ul li{
+	padding:8px 0;
+	border-bottom:1px solid #fff;
+}
+#leftnav ul li a{
+	font-size:1.4em;
+	color:#8a9a9d;
+	padding:0 0 0 20px;
+}
+#leftnav ul li a:hover, #leftnav ul li.active a{
+	color:#000;
+	text-decoration:none;
+}
+#leftnavb{
+	font-size:0;
+	width:232px;
+	height:52px;
+	background:#e9ebec url(../images/back_leftnavb.png) repeat-x;
+}
+#place_univ{
+	background:url(../images/back_univ.jpg) no-repeat;	
+	width:307px;
+	height:325px;
+	float:right;
+	padding:90px 137px 90px 133px;
+	position:relative;
+	z-index: 1;
+}
+#place_univ h3{
+	font-size:1.8em;
+	margin:0 0 10px 0;
+}
+#place_univ p{
+	font-size:1.2em;
+	padding:0 0 10px 0;
+	line-height:16px;
+}
+#place_univ ul{
+	list-style:disc;
+	padding:0 0 0 15px;
+	font-size:1.2em;
+}
+#place_univ p a, #place_about p a{
+	background: url(../images/borderlink.gif) repeat-x 0 14px;
+	color:#2692ab;
+	text-decoration:none;
+}
+#place_univ p a:hover, #place_about p a:hover{
+	text-decoration:none;
+	background:none;
+}
+
+#tele{
+	width:152px;
+	height:312px;
+	font-size:1.2em;
+	position:relative;
+	overflow:hidden;
+	display:block;
+	float:left;
+	text-indent:-5000px;
+}
+#tele span{
+	background:url(../images/tele.gif) no-repeat;
+	position:absolute;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+a#tele:hover span, a#tele.hover span{
+	background:url(../images/tele.gif) no-repeat 0 -312px;
+}
+
+#compass{
+	width:182px;
+	height:169px;
+	font-size:1.2em;
+	position:relative;
+	overflow:hidden;
+	display:block;
+	float:left;
+	text-indent:-5000px;
+}
+#compass span{
+	background:url(../images/compass.gif) no-repeat;
+	position:absolute;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+a#compass:hover span, a#compass.hover span{
+	background:url(../images/compass.gif) no-repeat 0 -169px;
+}
+#wheel{
+	width:132px;
+	height:245px;
+	font-size:1.2em;
+	position:relative;
+	overflow:hidden;
+	display:block;
+	float:left;
+	text-indent:-5000px;
+}
+#wheel span{
+	background:url(../images/wheel.gif) no-repeat;
+	position:absolute;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+a#wheel:hover span, a#wheel.hover span{
+	background:url(../images/wheel.gif) no-repeat 0 -245px;
+}
+
+#place_compass{
+	width:182px;
+	height:169px;
+	position:absolute;
+	right:-46px;
+	top:-31px;
+	z-index: 1;
+}
+
+#place_wheel{
+	width:132px;
+	height:245px;
+	position:absolute;
+	right:0;
+	bottom:0;
+	z-index: 1;
+}
+
+#place_tele{
+	width:150px;
+	height:310px;
+	position:absolute;
+	left:0px;
+	bottom:2px;
+	z-index: 1;
+}
+
+#place_univ_content{
+	position: relative;
+	z-index: 10;
+}
+
+a.ur_obj { outline: none; }
+
+/* Start CSS POPUP Menu
+=====================================================================*/
+#place_menu{
+	width:775px;
+	height:36px;
+}
+
+#place_menu ul ul a{
+	text-align:left;
+	border:none;
+	text-decoration:none;
+}
+#place_menu ul ul{
+	position:absolute;
+	z-index:500;
+	display:none;
+	width:250x;
+	background: url(../images/back_popup.png);
+	margin:36px 0 0 0;
+}
+#place_menu #mainmenu2 ul { background: url(../images/back_popup2.png); }
+div#place_menu ul li ul li:hover{
+	cursor:pointer;
+	z-index:100;
+	background:#799f10;
+}
+div#place_menu #mainmenu2 li ul li:hover{
+	background: #5F6A6D;
+}
+#place_menu ul li ul li{
+	float:none;
+	display:block;
+	font-size:1.0em;
+	padding:2px;
+	text-transform:none;
+	font-weight:lighter;
+	height:20px;
+	border-right:none;
+	width:250px;
+}
+#place_menu ul li ul li a{
+	color:#000;
+	padding:2px 5px 2px 18px;
+	height:15px;
+	display:block;
+}
+#place_menu ul li ul li a:hover{
+	background:none;
+	color:#fff;
+}
+div#place_menu li:hover ul ul,
+div#place_menu li li:hover ul ul
+{display:none;}
+
+div#place_menu li:hover ul,
+div#place_menu li li:hover ul
+{display:block;}
+
+div#place_menu li:hover{
+	background: url(../images/back_popup.png);
+	color:#000;
+}
+
+/* End CSS Drop Down Menu */
+
+
+/* Start Map CSS
+=====================================================================*/
+#mapback {
+	position: absolute;
+	display: block;
+	padding: 7px 15px;
+	bottom: 0px;
+	right: 0px;
+	background: #A0C423;
+	color: white;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+}
+#map a.bullet {
+	display: none;
+	position: absolute;
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-image: url('images/bullets.png');
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+#map a.yellow {  background-position: 0px -15px; }
+#map a.green   {  background-position: 0px -30px; }
+#map a.blue     {  background-position: 0px -45px; }
+#map a.purple {  background-position: 0px -60px; }
+
+#map a.bullet:hover { text-decoration: none; }
+
+#map div.popup{
+	display: none;
+	position: absolute;
+	top: 67px;
+	left: 176px;
+	width: 225px;
+	height: 310px;
+	background: url(images/popup.png) no-repeat;
+	z-index: 10;
+}
+
+#map div.yellow { background-position: -225px 0px } 
+#map div.green   { background-position: -450px 0px } 
+#map div.blue     { background-position: -675px 0px } 
+#map div.purple { background-position: -900px 0px } 
+
+#map div.popup h3 {
+	display: block;
+	padding: 8px 13px 13px 13px;
+	color: white;
+	font-size: 17px;
+}
+#map div.yellow h3 { color: black; }
+
+#map div.popup div.popupcontent{
+	position: absolute;
+	top: 54px;
+	height: 256px;
+	padding: 0 15px;
+	overflow: auto;
+	overflow: visible; /* Thanks Kevin Mario! */
+	font-family: arial;
+	font-size: 13px;
+	line-height: 18px;
+}
+#map div.popup div.popupcontent p{
+	margin: 10px 0;
+	width: 195px;
+}
+#map div.popup div.popupcontent a {
+	color: blue;
+	border-bottom: 1px dotted blue;
+}
+#map div.popup div.popupcontent a:hover {
+	text-decoration: none;
+	}
+#map div.popup a.close{
+	display: block;
+	position: absolute;
+	top: 286px;
+	left: 15px;
+}
+#map div.popup a.close img{
+	border: none;
+	z-index: 100;
+}

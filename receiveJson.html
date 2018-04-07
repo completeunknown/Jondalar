@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    
+<html>
+<head>
+    <title>Receive JSON</title>
+<script>
+    var xmlhttp;
+    
+    window.onload=function()
+    {
+        document.getElementById('butEmployees').addEventListener('click', getEmployees, true);
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "jsonEmp.php", true);
+    }
+    
+    function getEmployees()
+    {
+        xmlhttp.onreadystatechange = receiveData;
+        xmlhttp.send();
+    }
+    
+    function receiveData()
+    {
+        if(xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            var output;
+            var data = eval('(' + xmlhttp.responseText + ')' );
+            //console.log(data);
+            //console.log(data.employees[0].name);
+            var loopLength = data.employees.length;
+            for (var i=0; i<loopLength; i++)
+            {
+                output += "<br/>Name: " + data.employees[i].name;
+                output += "<br/>Position: " + data.employees[i].position;
+            }
+            document.getElementById('result').innerHTML = output;
+        }
+    }
+</script>
+</head>
+
+<body>
+    <div id="result"></div>
+    <button id="butEmployees">Get Employees</button>
+</body>
+
+</html>

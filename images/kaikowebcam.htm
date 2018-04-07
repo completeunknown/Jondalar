@@ -1,0 +1,134 @@
+<!-- %openfile=yowindow.txt% -->
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<link rel="shortcut icon" href="http://www.kaikowetter.ch/favicon.ico" />
+<link rel="address bar icon" href="http://www.kaikowetter.ch/favicon.ico" />
+<meta http-equiv="Content-type" content="text/html; CHARSET=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Refresh" content="3600">
+<meta name="description" content="D&ouml;ttingen, Webkamera, Webcam, Kaikowetter, Unteres Aaretal, Wetter, Wetterwerte, Wetterstation, Wettermessnetz, Schweiz, Aargau, Bildarchiv, " />
+<meta name="keywords" content="D&ouml;ttingen, Webkamera, Webcam, Mobotix, Kaikowetter, Unteres Aaretal, Wetter, Wetterwerte, Wetterstation, Wettermessnetz, Schweiz, Aargau, Bildarchiv, " />
+<meta name="abstract" content="Webkamera">
+<meta name="page-type" content="Karten,Texte,Daten,Bilder">
+<meta name="page-topic" content="Webcamera,Webkamera">
+<meta name="revisit-after" content="1 day">
+<meta name="robots" content="index,follow">
+<meta name="author" content="©2008 Kai Kobler">
+<meta Name="language" content="de">
+<meta name="audience" content="Alle">
+<meta name="copyright" content="©2008 Kai Kobler">
+<title>Webcam von D&ouml;ttingen</title></head>
+<body bgcolor="black">
+<b><font face="tahoma" size="3" color="white">Webcam von D&ouml;ttingen</font></b>
+<script language="JavaScript">
+<!--
+var picCount   = 60;
+var startHour  = 0;
+var picArray   = new Array(picCount);
+var picNumber  = 1;
+var picLoaded  = 0;
+var delayTime  = 150;
+var actTimeout = null;
+
+function Play() {
+  if (actTimeout)
+  {
+    clearTimeout(actTimeout);
+    actTimeout = null;
+  }
+  picNumber = ((picNumber + picCount) % picCount) + 1;
+  document.picActual.src = picArray[picNumber].src;
+  actTimeout = setTimeout('Play()', (picNumber == picCount) ? (4 * delayTime) : delayTime);
+}
+function Stop() {
+  if (actTimeout)
+  {
+    clearTimeout(actTimeout);
+    actTimeout = null;
+  }
+}
+function Step(direction) {
+  if (actTimeout)
+  {
+    clearTimeout(actTimeout);
+    actTimeout = null;
+  }
+  picNumber = ((picNumber + picCount - 1 + direction) % picCount) + 1;
+  document.picActual.src = picArray[picNumber].src;
+}
+function LoadImages() { 
+    picCount   = 60;
+	document.picActual.src = 'http://www.kaikowetter.ch/mobotix/webcam.jpg';
+    for (var i = 1; i <= picCount; i++)
+  {
+    var minuten = startHour * 60 + (i - 1) * 1;
+    var x = '' + Math.floor(minuten % 60);
+    while (x.length < 2) 
+      x = '0' + x;
+    picArray[i] = new Image();
+    picArray[i].src = 'http://www.kaikowetter.ch/mobotix/animation/minute' + x + '.jpg';
+  }
+}
+function dayImage() { 
+    picCount   = 72;
+    document.picActual.src = 'http://www.kaikowetter.ch/mobotix/webcam_day/hour0000.jpg';
+    for (var i = 1; i <= picCount; i++)
+  {
+    var minuten = startHour * 60 + (i - 1) * 20;
+    var x = '' + Math.floor(minuten % 60);
+    while (x.length < 2) 
+      x = '0' + x;
+   
+    var x = Math.floor(minuten / 60) + x;
+    while (x.length < 4) 
+      x = '0' + x;  
+      
+    picArray[i] = new Image();
+    picArray[i].src = 'http://www.kaikowetter.ch/mobotix/webcam_day/hour' + x + '.jpg';
+  }
+    Play()
+}
+function MM_findObj(n, d) { 
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+function MM_showHideLayers() { 
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+<br><tr><td align="left"><b><font face="tahoma" size="1" color="white">Regenmengen: &nbsp;
+Heute &nbsp; 5.2mm&nbsp; /
+Monat &nbsp; 7.8mm&nbsp; / 
+Jahr &nbsp; 694.8mm</font></b></td><br><br>
+<input type="image" title="Animation abspielen"   width="60" height="16" src="/mobotix/images/whstart.gif" onClick="Play()"> 
+<input type="image" title="Animation anhalten"    width="60" height="16" src="/mobotix/images/whstop.gif"  onClick="Stop()">
+<input type="image" title="langsamer abspielen"   width="16" height="16" src="/mobotix/images/whslow.gif"  onClick="delayTime *= 2">
+<input type="image" title="schneller abspielen"   width="16" height="16" src="/mobotix/images/whspeed.gif" onClick="delayTime /= 2">
+<input type="image" title="ein Webcambild zurück" width="32" height="16" src="/mobotix/images/wh1back.gif" onClick="Step(-1)"> 
+<input type="image" title="ein Webcambild vor"    width="32" height="16" src="/mobotix/images/wh1vor.gif"  onClick="Step(1)">
+<img src="/mobotix/images/black.gif"  width="30" height="16">
+<input type="image" title="aktuelles Webcambild"  width="80" height="16" src="/mobotix/images/whlive.gif"  onClick="location.reload()">
+<img src="/mobotix/images/black.gif"  width="30" height="16">
+<input type="image" title="zurück"                width="24" height="16" src="/mobotix/images/whreturn.gif"onClick="LoadImages()">
+<input type="image" title="letzte 24 Stunden"     width="32" height="16" src="/mobotix/images/wh24h.gif"   onClick="dayImage()">
+<img src="/mobotix/images/black.gif"  width="42" height="16">
+<a href="http://kaikowettercam.dyndns.org/mobotix/webcamarchiv.php"><img src="/mobotix/images/wharchiv.gif" title="Bildarchiv der Webcam D&ouml;ttingen" width="80" height="16" border="0"></a>
+<img onMouseOver="MM_showHideLayers('inf','','show')" onMouseOut="MM_showHideLayers('inf','','hide')" src="/mobotix/images/whinfo.gif" width="50" height="16">
+<div id='inf' style='position:relative; left:0px; top:314px; width:0px; height:1px; visibility: hidden'><img src="/mobotix/images/infotrans.gif" width="540" height="113"></div></style>
+<img name='picActual' src='http://www.kaikowetter.ch/mobotix/webcam.jpg' width="640" height="480" title='Aktuelle Bilder der Webcam D&ouml;ttingen'></tr>
+<script language="JavaScript">
+<!--
+    LoadImages();
+//-->
+</script></body></html>
+
+

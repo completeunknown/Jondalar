@@ -1,0 +1,73 @@
+<!-- Hurricane Electric countdown for IP v4 EOL
+
+<iframe src="he_counter.htm" width="160" height="490" frameborder="0" name="frame_a">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+<!-- from @guy.com to fix height="100%" issue in iframes
+
+<script language="JavaScript">
+<!--
+function resize_iframe()
+{
+
+	var height=window.innerWidth;//Firefox
+	if (document.body.clientHeight)
+	{
+		height=document.body.clientHeight;//IE
+	}
+	//resize	the iframe according to the size of the
+	//window (all these should be on the same line)
+	document.getElementById("glu").style.height=parseInt(height-
+	document.getElementById("glu").offsetTop-8)+"px";
+}
+
+// this will resize the iframe every
+// time you change the size of the window.
+window.onresize=resize_iframe; 
+
+//Instead of using this you can use: 
+//	<BODY onresize="resize_iframe()">
+
+
+//-->
+</script>
+And inside your page's body create the iframe tag: 
+<iframe id="glu" width="100%" onload="resize_iframe()">
+</iframe>
+
+<!-- solution for getElementsByClass
+
+window.onload = function() {
+
+var allATags = new Array();
+var allATags = document.getElementsByTagName(‘A’);
+
+for (i=0; i < allATags.length; i++) {
+if (allATags[i].className == 'noshow') {
+allATags[i].onclick = function(){ return false; };
+}
+}
+}
+
+Google API example
+
+<script type="text/javascript">     
+	<!--
+	google.load("feeds", "1");     
+	function initialize() 
+	{var feed = new google.feeds.Feed("http://www.digg.com/rss/index.xml");      
+	feed.load(function(result) 
+	{        if (!result.error) 
+	{          var container = document.getElementById("feed");          
+	for (var i = 0; i < result.feed.entries.length; i++) 
+	{            var entry = result.feed.entries[i];            
+	var div = document.createElement("div");            
+	div.appendChild(document.createTextNode(entry.title));            
+	container.appendChild(div);          
+	}        
+	}      
+	});    
+	}    
+	google.setOnLoadCallback(initialize);  
+	//--></script>  

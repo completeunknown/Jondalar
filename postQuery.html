@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Query</title>
+    <script>
+        var xmlhttp;
+        
+        window.onload = function()
+        {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = receiveData;
+            xmlhttp.open("POST", "multiply.php", true);
+        }
+        
+        function getTable()
+        {
+            var theNum = document.getElementById("userNumber").value;
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("num=" + theNum);
+        }
+        function receiveData()
+        {
+            if (xmlhttp.readyState ==4 && xmlhttp.status==200)
+            {
+                document.getElementById("result").innerHTML = xmlhttp.responseText;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <label for="value">Number</label><input type="text" id="userNumber" /><br />
+    <input type="button" onclick="getTable()" value="Get Multiplication Table" />
+    <div id="result"></div>
+    
+</body>
+</html>

@@ -1,0 +1,271 @@
+body
+{
+font-size:80%;
+font-family: 'segoe ui', 'verdana','sans serif';
+background-color:#FFFFFF;
+color:#000080;
+margin:30px;
+background-image:url('images/gradient2.png');
+background-repeat:repeat-x;
+}
+
+button
+{font-family: 'segoe ui';
+	}
+	
+button:hover {
+   border-top-color: #18597a;
+   background: #18597a;
+   color: #ff0;
+   }
+button:active {
+   border-top-color: #4b435e;
+   background: #4b435e;
+   }
+a img
+{
+border:0;
+}
+
+iframe.right
+{
+float:right;
+}
+
+iframe.left
+{
+float:left;
+}
+
+.pos_fixed
+{
+position:fixed;
+top:200px;
+right:225px;
+left:800px;
+}
+
+table, th, tr, td
+{
+vertical-align:top;
+padding:5px;
+}
+
+table.plain
+{
+border-collapse: collapse;
+border: 1px solid teal;
+padding: 1px;}
+
+
+a.hidden:link,a.hidden:visited,a.hidden:hover,a.hidden:active{color:#0033cc;text-decoration:none;}
+a.topnav:link,a.topnav:visited {color:#0000ff;text-decoration:none;background-image:url('images/topnav_bg.gif');}
+a.topnav:hover,a.topnav:active {color:#f60;text-decoration:none;font-weight:500;background-image:url('images/topnav_bg.gif');}
+
+a.topnav
+{
+margin:0px;
+font-family: verdana;
+background-color:#eeeeee;
+margin-top:5px;
+margin-bottom:10px;
+padding-top:3px;
+padding-bottom:3px;	
+background-image:url('images/topnav_bg.gif');
+background-position:bottom;
+background-repeat:repeat-x;
+}
+
+.plain
+{
+border-collapse: collapse;
+width: 100%;
+vertical-align: top;
+padding:6px 14px 4px 14px;
+}
+
+td.news
+{
+width:50%;
+padding:20px;
+}
+
+#basic 
+{
+border: 1px solid blue;
+border-collapse: collapse;
+width: 80%;
+}
+#basic td
+{
+vertical-align: top;
+border: 1px solid blue;
+padding:3px 7px 2px 7px;
+}
+
+#basic th
+{background-color:#ADD8E6;}
+
+h1 {font-size:200%;font-family:'Trebuchet MS';}
+h1.blue {font-size:200%; font-family:'Trebuchet MS'; color:#0E0E7C;}
+h2 {font-size:160%;font-family:'Trebuchet MS';}
+h2.blue {font-size:160%;font-family:'Trebuchet MS'; color:#0044FF;}
+h3 {font-size:140%;}
+
+
+
+/*a:link {color:#0000ff;}
+a:visited {color:#aa00aa;}
+a:hover {color:#aa0000;}
+a:active {color:#00aa00;}*/
+
+/*snagged from sitepoint.com*/
+a, a:link
+  {
+    color: #06c;
+    background: transparent;
+  }
+  a:visited
+  {
+    color:#4b5970;
+    background: transparent;
+  }
+  a:hover, a:focus, a:active
+  {
+    color: #f60;
+    background: transparent;
+  }
+
+#footer
+{
+vertical-align:middle;
+}
+
+/* root element for tabs  */
+.tabs { 
+	list-style:none; 
+	margin:0 !important; 
+	padding:0;
+	height:30px;
+	border-bottom:1px solid #666;	
+}
+
+/* single tab */
+.tabs li { 
+	float:left;	 
+	text-indent:0;
+	padding:0;
+	margin:0 !important;
+	list-style-image:none !important; 
+}
+
+/* link inside the tab. uses a background image */
+.tabs a { 
+	background: url('images/tabs.png') no-repeat -652px 0;
+	font-size:15px;
+	display:block;
+	height: 30px;  
+	line-height:30px;
+	width: 111px;
+	text-align:center;	
+	text-decoration:none;
+	color:#000;
+	padding:0px;
+	margin:0px;	
+	position:relative;
+	top:1px;
+}
+
+.tabs a:active {
+	outline:none;		
+}
+
+/* when mouse enters the tab move the background image */
+.tabs a:hover {
+	background-position: -652px -31px;	
+	color:#fff;	
+}
+
+/* active tab uses a class name "current". it's highlight is also done by moving the background image. */
+.tabs .current, .tabs .current:hover, .tabs li.current a {
+	background-position: -652px -62px;		
+	cursor:default !important; 
+	color:#000 !important;
+}
+
+/* Different widths for tabs: use a class name: w1, w2, w3 or w4 */
+
+/* width 1 */
+.tabs .w1 			{ background-position: -519px 0; width:134px; }
+.tabs .w1:hover 	{ background-position: -519px -31px; }
+.tabs .w1.current { background-position: -519px -62px; }
+
+/* width 2 */
+.tabs .w2 			{ background-position: -366px -0px; width:154px; }
+.tabs .w2:hover 	{ background-position: -366px -31px; }
+.tabs .w2.current { background-position: -366px -62px; }
+
+
+/* width 3 */
+.tabs .w3 			{ background-position: -193px -0px; width:174px; }
+.tabs .w3:hover 	{ background-position: -193px -31px; }
+.tabs .w3.current { background-position: -193px -62px; }
+
+/* width 4 */
+.tabs .w4 			{ background-position: -0px -0px; width:194px; }
+.tabs .w4:hover 	{ background-position: -0px -31px; }
+.tabs .w4.current { background-position: -0px -62px; }
+
+
+/* initially all panes are hidden */ 
+.panes .pane {
+	display:none;		
+}
+
+div.magazine
+ {
+-moz-column-count:3; /* Firefox */
+-moz-column-gap:40px; /* Firefox */
+-moz-column-rule:1px outset #0000ff; /* Firefox */
+
+-webkit-column-count:3; /* Safari and Chrome */
+-webkit-column-gap:40px; /* Safari and Chrome */
+-webkit-column-rule:1px outset #0000ff; /* Safari and Chrome */
+
+column-count:3;
+column-gap:40px;
+column-rule:1px outset #0000ff;
+
+text-align:justify;
+text-justify:auto;
+}
+
+p.first_letter:first-letter
+{
+font-size:150%;
+font-variant:small-caps;
+}
+
+/* ajax and php exercises */
+
+
+div.ajaxdiv 
+{
+float: left;
+border: 0px solid blue;
+padding: 5px;
+position: relative;
+    right: 20px;
+    width: 20%;
+	height: 240px;
+    background-color: #e0e0fa;
+}
+
+#compstyle
+{
+float: left;
+background-color: #aabbcc;
+font-family: lucida console;
+font-size: 1.2em;
+color: #ffffff;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ajax exercises</title>
+  <!-- <base href="file:///C:/Data/Web/" /> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Beat Josef Zimmermann V&ouml;gele" />
+  <link rel="stylesheet" type="text/css" href="mytheme.css" />
+  <script type="text/javascript" src="myweb.js"></script>
+  <script type="text/javascript" src="ajax_exe.js"></script>
+  <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.6/jquery.tools.min.js"></script>
+  <script type="text/javascript" src="javascript/msgbox/jquery.msgBox.js"></script>
+<link rel="stylesheet" type="text/css" href="msgBoxLight.css" />
+  </head>
+<body id="mybody">
+
+<h1 class="blue">ajax exercises</h1>
+<p><a class="topnav" href="index.htm">&nbsp;HOME&nbsp;</a><a class="topnav" href="video_embed_test_index.htm">&nbsp;VIDEO&nbsp;</a><a class="topnav" href="personal.htm">&nbsp;LINKS&nbsp;</a></p>
+
+<iframe width='100%' height='520' frameborder='0' src='http://jjvidalmac.carto.com/viz/c3c54164-7fcf-11e4-b04f-0e853d047bba/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+<h2>Exercises from skillport ajax course</h2>
+
+<div class="ajaxdiv">
+<button id="testphp" type="button">Call test.php</button>
+<div id="phparray"></div>
+</div>
+
+<div class="ajaxdiv">
+<p id="cchanged" style="color: teal;"> This is the original content of the div. </p>
+<button type="button" id="changeButton">Click to change content</button>
+<button type="button" id="changeBack">Back</button>
+ <p></p>
+</div>
+
+<div id="loadresult" class="ajaxdiv">
+    <button type="button" id="loadData">Load Data</button>
+</div>
+
+<div class="ajaxdiv">
+<div>
+    <button type="button" id="rsmonitor">ready state monitor</button>
+</div>
+</div>
+
+<div class="ajaxdiv">
+	<div><button type="button" onclick="getComputers()">Get Computers</button></div>
+		<div id="computerlist"></div>
+	
+</div>
+
+<div class="ajaxdiv">
+	<div>
+	<label for="userNumber">Enter a number: </label><input type="text" id="userNumber" />&nbsp;
+	<button type="button" id="multiply" style="clear: both">multiply</button>
+	</div>
+	<div id="multiplied"></div>
+</div>
+
+
+	
+<div id="compstyle" class="ajaxdiv">
+	<div><button type="button" id="butstyle">apply compStyle</button>
+	</div><div id="styledlist">
+	</div>
+</div>
+
+<div class="ajaxdiv">
+	<div><button type="button" id="butEmployees">Get Employees</button></div>
+	<div id="employeelist">
+	</div>
+</div>
+
+<div  id="bandlist" class="ajaxdiv">
+<div style="float: left">
+<p><button type="button" id="btnCreateObject" onclick="createBandsList()">Create Object (Bands List)</button>
+</p>
+</div>
+<div style="float: left">
+<div style="float: left">
+	<label for="band1" style="font: normal 1.3em segoe ui">Band One: </label><br/>
+	<label for="band2" style="font: normal 1.3em segoe ui">Band Two: </label><br/>
+	<label for="band3" style="font: normal 1.3em segoe ui">Band Three: &nbsp; &nbsp; </label>
+</div>
+	
+	<div style="float: left">
+	<input type="text" id="band1"/><br/>
+	<input type="text" id="band2"/><br/>
+	<input type="text" id="band3"/><br/>
+	</div>
+<div id="bands" style="clear: left"></div>
+</div>
+</div>
+
+<div class="ajaxdiv"><p id="chgcssdiv"></p>
+<div><button type="button" id="chgcss">Change CSS</button></div>
+<div style="float: left">
+	<label for="body_font" style="font: normal 1.3em segoe ui">Font: </label><br/>
+	<label for="body_text" style="font: normal 1.3em segoe ui">Text: </label><br/>
+	<label for="body_bgd" style="font: normal 1.3em segoe ui">Background: </label><br/>
+	<label id="res_but" for="rem_class" style="font: normal 1.3em segoe ui">Remove Class: </label><br/>
+	</div>
+	<div style="float: left">
+	<input type="text" id="body_font"/><br/>
+	<input type="text" id="body_text"/><br/>
+	<input type="text" id="body_bgd"/><br/>
+	<input type="text" id="rem_class"/><br/>
+	</div>
+</div>
+
+<div class="ajaxdiv">
+<form action="jsonReceiver.php?bands" id="form1"><p>
+  <label for="banda">Band A</label>
+  <input type="text" name="banda" id="banda" value=""></input></p><p>
+  <label for="bandb">Band B</label>
+  <input type="text" name="bandb" id="bandb" value=""></input></p><p>
+  <label for="bandc">Band C</label>
+ <input type="text" name="bandc" id="bandc" value=""></input></p><p>
+ <input type="submit" value="Submit"></input></p>
+  </form>
+</div>
+
+<div class="ajaxdiv">
+<p><a href="computers.xml">styled xml data</a></p>
+<p><a href="XMLServerResponse.php">xml server reponse php</a></p>
+<p><a href="jsonReceiver.php">JSON receiver php</a></p>
+</div>
+
+<!-- FOOTER -->
+<div class="ajaxdiv">
+<table>
+<tr>
+  <td>
+  <a href="http://validator.w3.org/check?uri=referer">
+     <img style="border:0;width:88px;height:31px;float:left"
+	   src="http://www.w3.org/Icons/valid-xhtml11-blue"
+	   alt="Valid XHTML 1.1 Strict" /></a>
+   	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+     <img style="border:0;width:88px;height:31px;float:left"
+       src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+       alt="Valid CSS!"/></a>
+  </td>
+    <td id="footer">
+  <a class="topnav" href="index.htm">&nbsp;HOME&nbsp;</a>
+    </td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

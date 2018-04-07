@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Send JSON</title>
+<script>
+	var xmlhttp;
+		
+		window.onload=function()
+		{
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = receiveData;
+		}
+		
+		function createObject()
+		{
+			var band1 = document.getElementById('band1').value;
+			var band2 = document.getElementById('band2').value;
+			var band3 = document.getElementById('band3').value;
+			var jsonOutput = "";
+			jsonOutput += "[";
+			jsonOutput += '"' + band1 + '",';
+			jsonOutput += '"' + band2 + '",';
+			jsonOutput += '"' + band3 + '"';
+			jsonOutput += "]";
+			console.log(jsonOutput);
+			var url = "jsonReceiver.php?bands="+ jsonOutput;
+			console.log(url);
+			// works: xmlhttp.open("GET", 'jsonReceiver.php?bands=["Santana", "Pink Floyd", "Styx"]', true);
+			// returns NULL: xmlhttp.open("GET", "jsonReceiver.php?bands=['Santana', 'Pink Floyd', 'Styx']", true);
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+		}
+		
+		function receiveData()
+		{
+			if(xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				document.getElementById('result').innerHTML = xmlhttp.responseText;
+			}
+		}
+</script>
+		
+</head>
+
+<body>
+	<label for="band1">Band One: </label><input type="text" id="band1" /><br/>
+	<label for="band2">Band Two: </label><input type="text" id="band2" /><br/>
+	<label for="band3">Band Three: </label><input type="text" id="band3" /><br/>
+	<button id="btnCreateObject" onclick="createObject()">Create Object</button>
+	<div id="result"></div>
+</body>
+</html>

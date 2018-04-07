@@ -1,0 +1,527 @@
+/* Global Defaults
+=====================================================================*/
+
+body
+{
+font-size: 80%;
+font-family: 'segoe ui', 'arial','sans serif';
+background-color:#FAFAFA;
+color:#505050;
+margin:30px;
+background-image:url('images/gradient2.png');
+background-repeat:repeat-x;
+}
+
+a.plated
+{
+margin:0px;
+font-family: verdana;
+background-color:#eeeeee;
+margin-top:5px;
+margin-bottom:10px;
+padding-top:3px;
+padding-bottom:3px;	
+background-image:url('images/plated_bg.gif');
+background-position:bottom;
+background-repeat:repeat-x;
+}
+
+h1 {font-size:200%;font-family:'Trebuchet MS';}
+h1.blue {font-size:200%; font-family:'Trebuchet MS'; color:#0E0E7C;}
+h2 {font-size:160%;font-family:'Trebuchet MS';}
+h2.blue {font-size:160%;font-family:'Trebuchet MS'; color:#0044FF;}
+h3 {font-size:140%;}
+
+a.hidden:link,a.hidden:visited,a.hidden:hover,a.hidden:active{color:#0033cc;text-decoration:none;}
+a.plated:link,a.plated:visited {color:#0000ff;text-decoration:none;background-image:url('images/plated_bg.gif');}
+a.plated:hover,a.plated:active {color:#f60;text-decoration:none;font-weight:500;background-image:url('images/plated_bg.gif');}
+
+
+ul,li{
+	margin:0;
+	padding:0;
+}
+
+h1,h2{
+	text-align:center;
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+ul {
+	list-style:none;
+}
+a img { 
+	border:none; 
+}
+.clear { 
+	clear:both; 	
+}
+
+a, a:link
+  {
+    color: #06c;
+    background: transparent;
+  }
+  a:visited
+  {
+    color:#4b5970;
+    background: transparent;
+  }
+  a:hover, a:focus, a:active
+  {
+    color: #f60;
+    background: transparent;
+ }
+   
+ div.popup a.close:link
+  {
+	color: #ffffff;
+ }
+
+ div.yellow a.close:link
+  {
+	color: #0000ff;
+ }
+ 
+ div.popup a.close:visited
+ {
+	color: #ffffff;
+ }
+ 
+ div.yellow a.close:visited
+  {
+	color: #0000ff;
+ }
+ 
+ /* Global Elements
+=====================================================================*/
+.replace{
+	position:relative;
+	margin:0;
+	padding:0;
+	/* \*/
+	overflow:hidden;
+	/* */
+}
+.replace span{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+
+.csclogo{
+	padding: 8px 30px 5px 30px;
+	vertical-align: middle;
+	width: 55px;
+	height: 32px;
+}
+
+.podlogo{
+	display: block;
+	position: absolute;
+	vertical-align: top; 
+	left: 50px;
+	top: 0px;
+	width: 24px;
+	height: 24px;
+}
+
+.apehead{
+	padding: 10px 15px 0px 10px;
+	width: 100px;
+	height: 40px;
+	vertical-align: -13px;
+}
+
+/* Start CSS Coding
+=====================================================================*/
+#csc_banner{
+	position: absolute;
+	top: 0px;
+	left: 30px;
+}
+
+#cscfont{
+	padding: 0px 0 0 0;
+	vertical-align: -3px;
+	width: 40px;
+	height: 22px;
+}
+
+#placeframe{
+	width:1120px;
+	height:630px;
+	float:left;
+}
+
+#tree1{
+	position: relative;
+	width:1120px;
+	padding: 0 0 4px 0;
+}
+#header{
+	text-align:center;
+	width:1120px;
+	height:100px;
+}
+
+#ullegend{
+	width:1120px;
+	margin:0px 0 8px 0;
+	font-size:15px;
+	font-family:'Trebuchet MS', Georgia, Garamond;
+}
+#ullegend li{
+	margin:8px 0;
+	padding:0 16px 0 23px;
+	display:inline;
+}
+#ullegend li label{
+	font-family: 'Segoe UI', Verdana, Calibri;
+}
+#ullegend .legend_1{
+	background: url(images/bullet1.png) no-repeat 0 -57px; /* red 0 */
+}
+#ullegend .legend_2{
+	background: url(images/bullet1.png) no-repeat 0 -38px; /* yellow -19 */
+}
+#ullegend .legend_3{
+	background: url(images/bullet1.png) no-repeat 0 -95px; /* green -38 */
+}	
+#ullegend .legend_4{
+	background: url(images/bullet1.png) no-repeat 0 -19px; /* blue -57 */
+}
+#ullegend .legend_5{
+	background: url(images/bullet1.png) no-repeat 0 -76px; /* purple -76 */
+}
+#ullegend .legend_6{
+	background: url(images/bullet1.png) no-repeat 0 -0px; /* cyan - 95 */
+}
+#ullegend .legend_7{
+	background: url(images/bullet1.png) no-repeat 0 -114px; /* xxx - 114 */
+}
+
+.footer{
+	color:#717272;
+	font-family:'Segoe UI', Verdana, Calibri;
+	width:1120px;
+	margin:0px;
+	text-align:center;
+}
+
+/* Start Map CSS 
+=====================================================================*/
+#map {
+position: relative;
+ width: 1120px;
+ height: 630px;
+ overflow: hidden;
+ float: left;
+ }
+
+#map img.zoomable {
+	border: 1px solid burlywood;
+	background: #ffffff;
+	opacity: 0.2;
+	}
+
+#map img.zoomable:hover {
+	border: 1px solid #f60;
+	background: #aaffaa;
+	opacity: 0.4;
+	}
+
+#returnlink {
+	position: absolute;
+	display: block;
+	padding: 7px 15px;
+	top: 0px;
+	right: 0px;
+	background: lightgrey;
+	color: white;
+	font-family: 'Segoe UI', arial, sans-serif;
+	font-size: 14px;
+}
+
+#returnlink:hover
+  {
+    color: #f60;
+	background: lightblue;
+ }
+ 
+#map a.bullet {
+	display: none;
+	position: absolute;
+	width: 15px;
+	height: 14px;
+	background-image: url(images/bullets1.png);
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+#map a.red	  {  background-position: 0px -1px;  }
+#map a.yellow {  background-position: 0px -16px; }
+#map a.green   {  background-position: 0px -31px; }
+#map a.blue     {  background-position: 0px -46px; }
+#map a.purple {  background-position: 0px -61px; }
+#map a.cyan     {  background-position: 0px -76px; }
+#map a.silver {  background-position: 0px -91px; }
+
+#map a.bullet:link { text-decoration: none; }
+#map a.bullet:hover { text-decoration: none; }
+
+#map div.popup{
+	border: 1px solid lightGrey;
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 843px;
+	width: 275px;
+	height: 350px;
+	background: url(images/popup.png) no-repeat;
+	z-index: 10;
+}
+#map div.red       { background-position: -0px 0px }
+#map div.yellow { background-position: -275px 0px } 
+#map div.green   { background-position: -550px 0px } 
+#map div.blue     { background-position: -825px 0px } 
+#map div.purple { background-position: -1100px 0px } 
+#map div.cyan     { background-position: -1375px 0px }
+#map div.silver { background-position: -1650px 0px } 
+
+#map div.popup h3 {
+	display: block;
+	position: absolute;
+	top: -2px;
+	width: 275px;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	font-weight: normal;
+	font-family: 'Trebuchet MS', verdana, sans-serif;
+}
+#map div.yellow h3 { color: blue; }
+
+#map div.popup div.popupcontent{
+	position: absolute;
+	top: 54px;
+	height: 296px;
+	padding: 0 0px;
+	overflow: auto;
+	overflow: visible; /* Thanks Kevin Mario! */
+	font-family: 'Segoe UI', verdana, arial;
+	font-size: 13px;
+	line-height: 18px;
+}
+#map div.popup div.popupcontent p{
+	margin: 30px 15px;
+	width: 260px;
+}
+
+#map div.popup div.popupcontent div.overlay{
+	position: absolute;
+	top: 3px;
+	left: 100px;
+	width: 80px;
+	height: 50px;
+	padding: 8px 12px;
+	overflow: auto;
+	overflow: visible;
+	font-family: tahoma, verdana, arial;
+	font-weight: 400;
+	font-size: 11px;
+}
+
+#map div.popup a.close{
+	display: block;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	top: 1px;
+	right: 1px;
+	background-image: url(images/close.gif);
+	font-family: 'Segoe UI', verdana, arial;
+}
+#map div.popup a.close img{
+	border: none;
+	z-index: 100;
+}
+
+#map div.popup a.c3{
+	display: block;
+	position: absolute;
+	height: 24px;
+	top: 55px;
+	right: -8px;
+}
+
+/* add some animation */
+
+#map div.popup a.c3:hover, a.mq:hover, a.nib:hover, a.one:hover, a.weather:hover, a.maps:hover, a.docs:hover, a.sites:hover, a.toolkit:hover{
+	background-position: 0px 3px;
+	}
+#map div.popup a.c3:hover{
+top: 58px;
+}
+
+img.podlogo:hover{
+top: 3px;
+}
+
+#map div.popup a.mq{
+	display: block;
+	position: absolute;
+	font-family: 'calibri', verdana, arial;
+	top: 1px;
+	left: 1px;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/mq.png);
+	background-repeat: no-repeat;
+	z-index: 8;
+}
+
+#map div.popup a.nib{
+	display: block;
+	position: absolute;
+	font-family: 'calibri', verdana, arial;
+	top: 0px;
+	left: 26px;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/nib.png);
+	background-repeat: no-repeat;
+	z-index: 13;
+}
+
+#map div.popup a.one{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 73px;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/onenote24.png);
+	background-repeat: no-repeat;
+	z-index: 12;
+}
+#map div.popup a.weather{
+	display: block;
+	position: absolute;
+	font-family: 'calibri', verdana, arial;
+	top: 1px;
+	left: 96px;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/weather24.png);
+	background-repeat: no-repeat;
+	z-index: 11;
+}
+
+#map div.popup a.maps{
+	display: block;
+	position: absolute;
+	font-family: 'calibri', verdana, arial;
+	top: -1px;
+	left: 120px;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/google_maps.png);
+	background-repeat: no-repeat;
+	z-index: 10;
+}
+
+#map div.popup a.docs{
+	display: block;
+	position: absolute;
+	font-family: 'calibri', verdana, arial;
+	top: 1px;
+	left: 145px;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/docs.png);
+	background-repeat: no-repeat;
+	z-index: 9;
+}
+
+#map div.popup a.sites{
+	display: block;
+	position: absolute;
+	font-family: 'calibri', verdana, arial;
+	top: 1px;
+	left: 170px;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/sites.png);
+	background-repeat: no-repeat;
+	z-index: 8;
+}
+
+#map div.popup a.toolkit{
+	display: block;
+	position: absolute;
+	font-family: 'calibri', verdana, arial;
+	top: 1px;
+	left: 192px;
+	width: 24px;
+	height: 24px;
+	background-image: url(images/toolkit.png);
+	background-repeat: no-repeat;
+	z-index: 7;
+}
+
+#map div.popup a.wan{
+	display: block;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 18px;
+	height: 18px;
+	background-image: url(images/wan.png);
+	background-repeat: no-repeat;
+	z-index: 5;
+}
+#map a.ifwan {  background-position: 0px -18px; }
+#map a.nowan   {  background-position: 0px -36px; }
+
+#map div.popup a.updtd{
+	display: block;
+	position: absolute;
+	top: 38px;
+	width: 275px;
+	text-align: center;
+	font-family: 'Trebuchet MS', verdana, arial;
+	font-size: 90%;
+	color: #aabbcc;	
+	z-index: 6;
+}
+/* font color for the "last updated by" caption in function of the box color 
+*/
+#map div.yellow a.updtd{
+	color: #ff8800;
+}
+#map div.green a.updtd{
+	color: #88ff88;
+}
+#map div.cyan a.updtd{
+	color: #0055ff;
+}
+
+/* docked control buttons for switching context
+*/
+
+div.dock{
+float: left;
+
+}
+
+button.controls{
+width: 120px;
+height: auto;
+display: block;
+
+}

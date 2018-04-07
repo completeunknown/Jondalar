@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Changing Content</title>
+	<script>
+		var contentDiv;
+		
+		window.onload = function()
+		{
+			document.getElementById('changeButton').addEventListener('click', changeContent, false);
+			contentDiv = document.getElementById('content')
+		}
+		
+		function changeContent()
+		{
+			contentDiv.innerHTML = "<strong>This is the new content.</strong>";	
+		}
+	</script>
+</head>
+
+
+<body>
+
+	<div id="content">This is the original content of the div.</div>
+	<button id="changeButton">Click to change content</button>
+
+</body>
+</html>

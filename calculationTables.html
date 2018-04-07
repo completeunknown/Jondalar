@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication tables</title>
+    <script>
+        var xmlhttp;
+        
+        window.onload = function()
+        {
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp = new XMLHttpRequest();
+            } else
+            {
+                xmlhttp =new ActiveXObjet("Microsoft.XMLHTTP");    
+            }
+            document.getElementById('loadData').addEventListener('click', loadAjaxData, false);
+        }
+        
+        function loadAjaxData()
+        {
+            var url;
+            url = "multiply.php?num=" + document.getElementById('userNum').value;
+            xmlhttp.onreadystatechange = serverResponse;
+            xmlhttp.open('GET', url, true);
+            xmlhttp.send();
+        }
+        
+        function serverResponse()
+        {
+            //alert(xmlhttp.readyState);
+            if (xmlhttp.readyState ==4 && xmlhttp.status ==200)
+            {
+                //alert("Data returned from server");
+                document.getElementById("result").innerHTML = xmlhttp.responseText;
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="userNum">Create Multiplication Table for:</label><input type="text" id="userNum" />
+    <div id="result"></div>
+    <button id="loadData">Load Multiplication Table</button>
+</body>
+</html>

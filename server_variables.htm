@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Response.Write(Request.ServerVariables())</title>
+  <!-- <base href="file:///C:/Data/Web/" /> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="Beat Josef Zimmermann V&ouml;gele" />
+  <link rel="stylesheet" type="text/css" href="mytheme.css" />
+  <script type="text/javascript" src="myweb.js"></script>
+</head>
+<body>
+<h1 class="blue">Server Variables Test</h1>
+<p><a class="topnav" href="index.htm">&nbsp;HOME&nbsp;</a></p>
+<p />
+<p>
+<b>You are browsing this site with:</b>
+<%Response.Write(Request.ServerVariables("http_user_agent"))%>
+</p>
+<p>
+<b>Your IP address is:</b>
+<%Response.Write(Request.ServerVariables("remote_addr"))%>
+</p>
+<p>
+<b>The DNS lookup of the IP address is:</b>
+<%Response.Write(Request.ServerVariables("remote_host"))%>
+</p>
+<p>
+<b>The method used to call the page:</b>
+<%Response.Write(Request.ServerVariables("request_method"))%>
+</p>
+<p>
+<b>The server's domain name:</b>
+<%Response.Write(Request.ServerVariables("server_name"))%>
+</p>
+<p>
+<b>The server's port:</b>
+<%Response.Write(Request.ServerVariables("server_port"))%>
+</p>
+<p>
+<b>The server's software:</b>
+<%Response.Write(Request.ServerVariables("server_software"))%>
+</p>
+
+
+<!-- FOOTER -->
+<table>
+<tr>
+  <td>
+     <a href="http://validator.w3.org/check?uri=referer">
+    <img style="border:0;width:88px;height:31px"
+	src="http://www.w3.org/Icons/valid-xhtml11-blue"
+	alt="Valid XHTML 1.1 Strict" /></a>
+  </td>
+  <td>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!"/></a>
+  </td>
+    <td id="footer">
+  <a class="topnav" href="index.htm">&nbsp;HOME&nbsp;</a>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

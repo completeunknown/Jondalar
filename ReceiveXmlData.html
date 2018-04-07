@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Receive XML Data</title>
+	<script>
+		var xmlhttp;
+		
+		window.onload = function()
+		{
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = receiveData;
+		}
+		
+		function getComputers()
+		{
+			xmlhttp.open('GET', "computers.php", true);
+			xmlhttp.send();
+		}
+		
+		function receiveData()
+		{
+			if(xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				var output="<table border='0'>";
+				var computersXML = xmlhttp.responseXML.documentElement.getElementsByTagName("computer");
+				for (var i=0; i < computersXML.length; i++)
+				{
+					output += "<tr>";
+					var nameElement = computersXML[i].getElementsByTagName("name");
+					var computerName = nameElement[0].firstChild.nodeValue;
+					output += "<td>" + computerName + "</td>";
+					var yearElement = computersXML[i].getElementsByTagName("year");
+					var year = yearElement[0].firstChild.nodeValue;
+					output += "<td>" + year + "</td>";
+					output += "</tr>";
+				}
+				output += "</table>"
+				document.getElementById("results").innerHTML = output;
+			}
+		}
+	</script>
+</head>
+
+
+<body>
+	<div id="results"></div>
+	<button onclick="getComputers()">Get Computers</button>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>xmlHTTPRequest Object</title>
+    <script>
+        var xmlhttp;
+        
+        window.onload = function()
+        {
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp = new XMLHttpRequest();
+            } else
+            {
+                xmlhttp =new ActiveXObjet("Microsoft.XMLHTTP");    
+            }
+            document.getElementById('loadData').addEventListener('click', loadAjaxData, false);
+        }
+        
+        function loadAjaxData()
+        {
+            xmlhttp.onreadystatechange = serverResponse;
+            xmlhttp.open('GET', "ajax_php_test.php", true);
+            xmlhttp.send();
+        }
+        
+        function serverResponse()
+        {
+            alert(xmlhttp.readyState);
+            if (xmlhttp.readyState ==4 && xmlhttp.status ==200)
+            {
+                alert("Data returned from server");
+                document.getElementById("result").innerHTML = xmlhttp.responseText;                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <button id="loadData">Load Data</button>
+</body>
+</html>

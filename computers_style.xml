@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html>
+            <body>
+                <h1>Computer History</h1>
+                <table cellspace="1">
+                    <tr style="background-color: #cccccc">
+                        <th>Computer Name</th>
+                        <th>Year</th>
+                    </tr>
+                    <xsl:for-each select="computers/computer">
+                        <xsl:sort select="year" />
+                        <xsl:choose>
+                        <xsl:when test="year &lt; 1985">
+                        <tr style="background-color: #ff0000">
+                            <td><xsl:value-of select="name" /></td>
+                            <td><xsl:value-of select="year" /></td>
+                        </tr>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <tr style="background-color: #00ff00">
+                            <td><xsl:value-of select="name" /></td>
+                            <td><xsl:value-of select="year" /></td>
+                        </tr></xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+    
+</xsl:stylesheet>

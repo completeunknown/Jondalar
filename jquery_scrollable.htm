@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>jQuery Tools Scrollable Exercise</title>
+  <!-- <base href="file:///C:/Data/Web/" /> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+  <meta name="author" content="Beat Josef Zimmermann V&ouml;gele"></meta>
+  <link rel="stylesheet" type="text/css" href="mytheme.css"></link>
+  <link rel="stylesheet" type="text/css" href="jquery_scrollable.css"></link>
+  <script type="text/javascript" src="myweb.js"></script>
+  <script type="text/javascript" src="jquery-min.js"></script>
+  <script type="text/javascript" src="jquery.tools.min.js"></script>
+</head>
+<body>
+
+<h1 class="blue">jQuery Tools Scrollable Exercise</h1>
+<p><a class="topnav" href="index.htm">&nbsp;HOME&nbsp;</a><a class="topnav" href="video_embed_test_index.htm">&nbsp;VIDEO&nbsp;</a><a class="topnav" href="personal.htm">&nbsp;LINKS&nbsp;</a></p>
+<h2 class="blue"><a href="http://flowplayer.org/tools/demos/scrollable/index.html">from Flowplayer.org</a></h2>
+
+<div>
+<!-- "previous page" action -->
+<a class="prev browse left"><img src="images/prev_button.gif" alt="prev" width="32" height="32" /></a>
+
+<!-- root element for scrollable -->
+<div class="scrollable">   
+   
+   <!-- root element for the items -->
+   <div class="items">
+   
+      <!-- 1-5 -->
+      <div>
+         <img src="http://farm1.static.flickr.com/143/321464099_a7cfcb95cf_t.jpg" alt="img"/>
+         <img src="http://farm4.static.flickr.com/3089/2796719087_c3ee89a730_t.jpg" alt="img"/>
+         <img src="http://farm1.static.flickr.com/79/244441862_08ec9b6b49_t.jpg" alt="img"/>
+         <img src="http://farm1.static.flickr.com/28/66523124_b468cf4978_t.jpg" alt="img"/>
+         <img src="http://farm1.static.flickr.com/164/399223606_b875ddf797_t.jpg" alt="img"/>
+      </div>
+      
+      <!-- 5-10 -->
+      <div>
+         <img src="http://farm1.static.flickr.com/163/399223609_db47d35b7c_t.jpg" alt="img"/>
+         <img src="http://farm1.static.flickr.com/135/321464104_c010dbf34c_t.jpg" alt="img"/>
+         <img src="http://farm1.static.flickr.com/40/117346184_9760f3aabc_t.jpg" alt="img"/>
+         <img src="http://farm1.static.flickr.com/153/399232237_6928a527c1_t.jpg" alt="img"/>
+         <img src="http://farm1.static.flickr.com/50/117346182_1fded507fa_t.jpg" alt="img"/>
+      </div>
+      
+      <!-- 10-15 -->
+      <div>
+         <img src="http://farm4.static.flickr.com/3629/3323896446_3b87a8bf75_t.jpg" alt="img"/>
+         <img src="http://farm4.static.flickr.com/3023/3323897466_e61624f6de_t.jpg" alt="img"/>
+         <img src="http://farm4.static.flickr.com/3650/3323058611_d35c894fab_t.jpg" alt="img"/>
+         <img src="http://farm4.static.flickr.com/3635/3323893254_3183671257_t.jpg" alt="img"/>
+         <img src="http://farm4.static.flickr.com/3624/3323893148_8318838fbd_t.jpg" alt="img"/>
+      </div>
+      
+   </div>
+   
+</div>
+
+<!-- "next page" action -->
+<a class="next browse right"><img src="images/next_button.gif" alt="next" width="32" height="32" /></a>
+</div>
+
+<script type="text/javascript">
+// execute your scripts when the DOM is ready. this is mostly a good habit
+$(function() {
+
+	// initialize scrollable
+	$(".scrollable").scrollable();
+
+});
+</script>
+
+<!-- FOOTER -->
+<table style="clear:both">
+<tr>
+  <td>
+     <a href="http://validator.w3.org/check?uri=referer">
+    <img style="border:0;width:88px;height:31px"
+	src="http://www.w3.org/Icons/valid-xhtml11-blue"
+	alt="Valid XHTML 1.1 Strict" /></a>
+  </td>
+  <td>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!"/></a>
+  </td>
+    <td id="footer">
+  <a class="topnav" href="index.htm">&nbsp;HOME&nbsp;</a>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

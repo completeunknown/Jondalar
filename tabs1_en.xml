@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--  xml-stylesheet type="text/css" href="my_xml.css"? --> 
+<!--  Edited by BZ  --> 
+<tabs>
+  <tab1>links</tab1> 
+  <tab2>news</tab2> 
+  <tab3>video</tab3> 
+  <tab4>private</tab4> 
+  <tab5>exercises</tab5> 
+  <tab6>reference</tab6> 
+  <tab7>templates</tab7> 
+</tabs>
+	
